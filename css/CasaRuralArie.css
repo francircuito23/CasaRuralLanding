@@ -413,12 +413,6 @@ hr{
 /* responsive del carrusel */
 @media (min-width:768px){
 
-    .cards-wrapper:hover .owl-next{
-        right: -55px;
-    }
-    .cards-wrapper:hover .owl-prev{
-        left: -63px;
-    }
     .owl-prev, .owl-next{
         width: 67px;
         height: 67px;
@@ -433,10 +427,11 @@ hr{
 }
 
 .container{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
+    background-color: var(--white);
 }
 
 .owl-stage-outer{
@@ -459,21 +454,21 @@ hr{
     display: flex;
     /* background-color: rgba(0, 0, 0, 0.5); */
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 150px;
     align-items: center;
     justify-content: center;
     transition: all .5s ease-in;
 }
 .owl-prev>i, .owl-next>i{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
+    color: var(--white);
+    font-size: 70px;
+    opacity: .7;
 }
 .owl-prev>i:hover,.owl-next>i:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(112, 96, 96);
 }
 .owl-next:hover, .owl-prev:hover{
-    background-color: var(--primario);
     border-color: white;
 }
 
@@ -481,13 +476,13 @@ hr{
     position: absolute;
     top: 50%;
     transform: translate(25%,-50%);
-    /* transform: translateY(-50%); */
+    transform: translateY(-50%);
     right: -8px;
 }
 .owl-prev{
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-10%,-50%);
     left: -9px;
 }
 .owl-stage-outer{
