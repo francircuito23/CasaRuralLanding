@@ -321,14 +321,33 @@ ion-icon[name="logo-instagram"]{
     height: 100%;
     width: 100%;
     background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .div__info__1{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-left: 7em;
+    margin-left: 7rem;
     color: var(--blue);
+}
+
+.div__info__1-2{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 7rem;
+    width: 100%;
+    color: var(--blue);
+}
+
+.columna{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 
@@ -337,9 +356,9 @@ ion-icon[name="logo-instagram"]{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin-left: 1em;
+    margin-left: 12rem;
+    width: 30%;
     color: var(--blue);
-    float: right;
 }
 
 .div__info__2__texto{
@@ -360,8 +379,8 @@ ion-icon[name="logo-instagram"]{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    margin-left: 10rem;
     color: var(--blue);
-    float: right;
     
 }
 
@@ -371,7 +390,7 @@ ion-icon[name="logo-instagram"]{
 
 .div__info__3__div, .div__info__4__div{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
 }
@@ -381,8 +400,8 @@ ion-icon[name="logo-instagram"]{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    margin-right: -5rem;
     color: var(--blue);
-    float: right;
 }
 
 hr{
@@ -411,4 +430,84 @@ hr{
         left: 46.5%;
         bottom: -20px;
     }
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+}
+
+.owl-stage-outer{
+    padding-top: 2rem;
+}
+
+.cards-wrapper{
+   width: 100%;
+   margin: 0 auto;
+}
+.card{
+    width: 65%;
+    height: 20rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.owl-prev, .owl-next{
+    margin-right: 0;
+    display: flex;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in;
+}
+.owl-prev>i, .owl-next>i{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.owl-prev>i:hover,.owl-next>i:hover{
+    color: rgb(0, 0, 0);
+}
+.owl-next:hover, .owl-prev:hover{
+    background-color: var(--primario);
+    border-color: white;
+}
+
+.owl-next{
+    position: absolute;
+    top: 50%;
+    transform: translate(25%,-50%);
+    /* transform: translateY(-50%); */
+    right: -8px;
+}
+.owl-prev{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: -9px;
+}
+.owl-stage-outer{
+    padding-top: 2rem;
+}
+.owl-dots{
+            
+    display: inline-flex;
+    position: absolute;
+    left: 20px;
+
+}
+.owl-dot{
+    width: 40px;
+    height: 7px;
+    background-color: var(--secundario);
+    opacity: .5;
+    margin-right: 8px;
+    
+}
+.owl-dots .active{
+    opacity: 1;
 }
