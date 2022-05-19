@@ -1,0 +1,197 @@
+:root{
+    --negro: black;
+    --white:white;
+    --blue: rgb(13, 55, 123);
+    --crema:  rgb(226, 195, 163);
+    --crema2: rgb(216, 168, 120);
+    --red: rgb(199, 24, 24);
+    
+}
+
+/*FONTS*/
+
+/*FONTS*/
+@font-face {
+    font-family: fuente1;
+    src: url(../fuentes/MinionVariableConcept-Roman.otf);
+}
+@font-face {
+    font-family: fuente2;
+    src: url(../fuentes/MyriadPro-Bold.otf);
+}
+
+@font-face {
+    font-family: fuente3;
+    src: url(../fuentes/MyriadPro-Light.otf);
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+} 
+body{
+    margin: 0;
+} 
+
+/* 
+body {
+    opacity: 0;
+    transition: opacity 3s;
+}
+*/
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.spacer{
+    width: 100%;
+    height: 15%;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   
+}
+#logo{
+    height: 100%;
+}
+.spacer2{
+    width: 100%;
+    height: 15%;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+#content{
+    width: 92%;
+    height: 70%;
+    padding: 0 4% 0 4%;
+    min-height: fit-content;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+#imgContainer{
+    
+    height: 60%; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}   
+
+#resultImg{
+    height: 50%;
+}
+
+#content > h2 , #content > p{
+   
+    color: var(--blue);
+    width: 90%;
+    text-align: center;
+    font-size: 30px;
+    font-family: fuente3;
+}
+.h2Light{
+    font-weight: 100;
+    width: 75%;
+}
+.spacer2 > p >a:hover{
+    cursor: pointer;
+}
+.spacer2 > p{
+    font-size: 26px;
+    color: white;
+    margin-top: 10px;
+    font-family: fuente3;
+}
+u{
+    font-weight: bolder;
+}
+
+
+            /* Responsive */
+    
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .spacer,.spacer2{
+        height: 10%;
+    }
+    #content{
+        height: 80%;  
+    }
+    #imgContainer{
+        height: 40%; 
+    }
+    #content > h2 , #content > p{
+        font-size: 4vh;
+    }
+    .spacer2 > p{
+        font-size: 3vh;
+    }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .spacer,.spacer2{
+        height: 10%;
+    }
+    #content{
+        height: 80%;  
+    }
+    #imgContainer{
+        height: 45%; 
+    }
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .spacer,.spacer2{
+        height: 10%;
+    }
+    #content{
+        height: 80%;  
+    }
+    #imgContainer{
+        height: 50%;  
+    }
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .spacer,.spacer2{
+        height: 15%;
+    }
+    #content{
+        height: 70%;
+    }
+    #imgContainer{
+        height: 60%; 
+    }
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .spacer,.spacer2{
+        height: 15%;
+    }
+    #content{
+        height: 70%;
+       
+    }
+    #imgContainer{
+        height: 60%; 
+    }
+}

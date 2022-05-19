@@ -1,0 +1,269 @@
+:root{
+    --negro: black;
+    --white:white;
+    --blue: rgb(13, 55, 123);
+    --crema:  rgb(226, 195, 163);
+    --crema2: rgb(216, 168, 120);
+    --red: rgb(199, 24, 24);
+}
+/*FONTS*/
+@font-face {
+    font-family: fuente1;
+    src: url(../fuentes/MinionVariableConcept-Roman.otf);
+}
+@font-face {
+    font-family: fuente2;
+    src: url(../fuentes/MyriadPro-Bold.otf);
+}
+
+@font-face {
+    font-family: fuente3;
+    src: url(../fuentes/MyriadPro-Light.otf);
+}
+
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+} 
+body{
+    margin: 0;
+    font-family: fuente3;
+} 
+
+/* 
+body {
+    opacity: 0;
+    transition: opacity 3s;
+}
+*/
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.spacer{
+    width: 100%;
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    height: 170px;
+    
+}
+.spacer>img{
+    height: 75%;
+    transform: translate(0%, 20%);
+}
+.spacer>div{
+    height: 25%;
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.spacer>div>h2{
+   color: white;
+   font-weight: lighter;
+   font-family: fuente3;
+}
+#mainCont{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+.sonCont{
+    
+    padding:  25px 15px;
+    /*border: solid 1px #e8e8e8;*/
+
+}
+
+
+Form{
+    width: 90%;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.sonCont > h2:after {
+    content: '';
+    display: block;
+    width: 100px ;
+    height: 3px;
+    margin: 10px auto 0 auto;
+    background-color: var(--blue);
+}
+
+
+label{
+    width: 100%;
+    text-align: left;
+}
+textarea { resize: none; }
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: 35px;
+    border: 1px solid #e8e8e8;
+}
+input:focus, textarea:focus {
+    outline-color: var(--blue);
+}
+input[type=submit]{
+    width: 10%;
+    min-width: 80px;
+    background-color: var(--blue);
+    color: white;
+    margin: 0 30%;
+
+}
+input[type=submit]:hover{
+    cursor: pointer;
+}
+
+
+/*chrome remove autocomplete highlight*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/*remove background when autofill input css*/
+@-webkit-keyframes autofill {
+    0%,100% {
+        color: #666;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+.g-recaptcha{
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.requiredForm , .errorField{
+    color: var(--red);
+    text-align: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+.sonCont>h4{
+    width: 100%;
+}
+.infDiv:first-of-type{
+    border-top: 1px solid #e8e8e8 ;
+    text-align: justify;
+}
+.infDiv{
+    min-height: 50px;
+    border-bottom: 1px solid #e8e8e8 ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.sonCont i {
+   color: var(--blue);
+   font-size: x-large;
+   margin-right: 15px;
+}
+
+.sonCont> i:nth-last-of-type(-n+2):hover {
+    cursor: pointer;
+}
+
+.sonCont>h4:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 20px 0 0 0;
+    background-color: var(--blue);
+}
+
+
+
+
+
+
+            /* Responsive */
+    
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sonCont {
+        width: 90%;
+    }
+    .spacer{
+        height: 100px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+      .sonCont {
+        width: 90%;
+    }
+    .spacer{
+        height: 120px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sonCont {
+        width: 90%;
+    }
+    .spacer{
+        height: 150px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sonCont {
+        width: 45%;
+    }
+    .spacer{
+        height: 170px;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .sonCont {
+        width: 35%;
+    }
+    .spacer{
+        height: 170px;
+    }
+    
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Reserva</title>
+    <link rel="stylesheet" href="../../css/form.css">
+    <link rel="shortcut icon" href="../../img/webIcon.png" type="image/x-icon">
+
+    <!--IMPORT RECAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="../js/form.js"></script>
+
+    <script src="https://kit.fontawesome.com/d3ce3e727e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="spacer">
+        <img src="../../img/LogoAzulLinea.png" alt="Casa Rural Aire">
+        <div><h2>Contacto - Reserva</h2></div>
+    </div>
+    
+    <div id="mainCont">
+        <div class="sonCont">
+            <form action="./formSend.php" method="post" id="formContactoReserva">
+                <label>Persona de contacto <span class="requiredForm">*</span></label><input type="text" name="personaContacto" placeholder="Juan Ruiz" required>
+                <label>Email <span class="requiredForm">*</span></label><input type="text" name="email" placeholder="juanruiz@mail.com" required>
+                <label>Teléfono <span class="requiredForm">*</span></label><input type="text" name="telefono" placeholder="+34 682 000 000" required>
+                <label>Asunto <span class="requiredForm">*</span></label><input type="text" name="asunto" required>
+                <label>Mensaje <span class="requiredForm">*</span></label><textarea name="mensaje" cols="40" rows="10" required></textarea>
+
+
+                <div class="g-recaptcha" 
+                    data-sitekey="6LeACsMfAAAAALms6N723yK2d8fD-Qg663KGLc2j">
+                </div> 
+                
+                
+                <input type="submit" value="Enviar" id="btn_enviar">
+
+            </form>
+        </div>
+        <div class="sonCont">
+            <h4 >Contáctanos</h4>
+
+            <p>¿Deseas más información o hacernos llegar tus sugerencias? Ponte en contacto con nosotros por tu medio de contacto preferido. Estaremos encantados de atenderte.</p>
+
+            <h4>Info</h4>
+
+            <div class="infDiv"> <i class="fa-solid fa-location-dot"></i><p> Calle el Tomillo, 29, 29520, Fuente de Piedra (Málaga)</p></div>
+            <div class="infDiv"> <i class="fa-solid fa-phone"></i><p>633 196 775</p></div>
+            <div class="infDiv"> <i class="fa-solid fa-envelope"></i><p>info@casaruralairefp.com</p></div>
+
+            <h4>Redes Sociales</h4>
+            <a href="https://www.facebook.com/pg/casaruralairefp/posts/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/casaruralairefp/?hl=es" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            
+        </div>
+    </div>
+    
+
+    
+    
+</body>
+</html>

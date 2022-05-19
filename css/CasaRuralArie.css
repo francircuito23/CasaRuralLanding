@@ -26,7 +26,7 @@ body, main {
 }
 
 body {
-  background-image: url('../../img/CASA\ RURAL\ AIRE-15.jpg');
+  background-image: url('../img/CASA\ RURAL\ AIRE-15.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,21 +129,27 @@ ion-icon[name="logo-instagram"]{
     cursor: pointer;
 }
 
+@media (max-width: 500px){
+    ion-icon[name="logo-facebook"]{
+        font-size: 25px;
+    }
+    
+    ion-icon[name="logo-instagram"]{
+        font-size: 25px;
+    }
+}
 
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 13rem;
+}
 .logo > *{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo-image{
-    position: relative;
-    top: 25vh;
-}
-
-.eslogan{
-    position: relative;
-    top: 20vh;
 }
 
 .eslogan h1{
@@ -154,30 +160,43 @@ ion-icon[name="logo-instagram"]{
     text-shadow: 8px 8px 8px #000000;
 }
 
+@media (max-width: 767px){
+    .eslogan h1{
+        font-size: 1em;
+    }
+}
+
 .logo-image img{
     width: 25%; height: 25%;
 }
 
+@media (max-width: 500px){
+    .logo-image img{
+        width: 50%; height: 50%;
+    }
+}
+
+
 .div-azul{
-    width: 100%; height: 1vh;
+    width: 100%; 
+    height: 1vh;
     background-color: rgb(55, 55, 141);
-    position: relative;
-    top: 41vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12rem;
 }
 
 .div__hojita{
-    width: 100%; height: 50%;
+    width: 100%; 
     background-color: #ffffff;
-    position: relative;
-    top: 41vh;
 }
 
 .div__hojita__img{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 7vh;
+    padding-top: 40px;
 }
 
 .div__hojita__img img{
@@ -197,43 +216,73 @@ ion-icon[name="logo-instagram"]{
     text-align: center;
 }
 
+@media (max-width: 500px){
+    .div__hojita__texto{
+        padding: 20px;
+        font-size: 20px;
+        line-height: 35px;
+        font-weight: 400;
+    }
+
+    .div__hojita__img img{
+        width: 15%; height: 15%;
+    }
+}
+
+
 .div__zonas{
-    height: 90vh;
     width: 100%;
     background-color: var(--crema);
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .div__zonas-2{
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .div__zonas-3{
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
+    height: 70%;
     background-color: var(--crema);
 }
+
+@media (max-width: 500px){
+    .div__zonas{
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .div__zonas-2{
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    
+    .div__zonas-3{
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
 
 .div__zonas__texto{
     display: flex;
     flex-direction: column;
-    color: #ffffff;
-    padding-top: 230px;
+    color: var(--white);
+    padding: 90px;
 }
 
 .div__zonas__texto-2{
     display: flex;
     flex-direction: column;
     color: var(--blue);
-    padding-top: 70px;
+    padding: 90px;
 }
 
 .div__zonas__texto-3{
@@ -241,67 +290,120 @@ ion-icon[name="logo-instagram"]{
     flex-direction: column;
     color: var(--white);
     float: left;
-    width: 80%;
+}
+
+@media (max-width: 500px){
+    .div__zonas__texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--white);
+        padding: 20px;
+    }
+    
+    .div__zonas__texto-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--blue);
+        padding: 20px;
+    }
+    
+    .div__zonas__texto-3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--white);
+        padding: 20px;
+        text-align: center;
+    }
 }
 
 .div__zonas-3 > .div__zonas__texto-3{
-    padding: 60px;
+    padding: 90px;
+}
+
+@media (max-width: 500px){
+    .div__zonas-3 > .div__zonas__texto-3{
+        padding: 20px;
+    }
 }
 
 .div__zonas__texto-h2{
     font-weight: 100;
-    margin-left: 5em;
 }
 
 .div__zonas__texto-h2-2{
     font-weight: 100;
-    margin-left: 5em;
 }
 
 .div__zonas__texto-h2-3{
     font-weight: 100;
-    margin-left: 5em;
 }
 
 .div__zonas__texto-p{
-    margin-left: 7.5em;
     text-align: left;
-    width: 40%;
 }
 
 .div__zonas__texto-p-2{
-    margin-left: 7.5em;
     text-align: left;
-    width: 70%;
 }
 
 .div__zonas__texto-p-3{
-    margin-left: 7.5em;
     text-align: left;
-    width: 40%;
+}
+
+@media (max-width: 500px){
+    .div__zonas__texto-h2{
+        text-align: center;
+        word-spacing: 10px;
+    }
+    
+    .div__zonas__texto-h2-2{
+        font-weight: 100;
+        word-spacing: 10px;
+    }
+    
+    .div__zonas__texto-h2-3{
+        font-weight: 100;
+        word-spacing: 10px;
+    }
+    
+    .div__zonas__texto-p{
+        text-align: center;
+    }
+    
+    .div__zonas__texto-p-2{
+        text-align: center;
+    }
+    
+    .div__zonas__texto-p-3{
+        text-align: center;
+    }
 }
 
 .div__zonas__imagen{
-    position: relative;
-    top: 21vh;
     margin: 0px auto;
-    height: 450px;
+    height: auto;
     width: 1840px;
     float: right;
     overflow: hidden; 
 }
 
 .div__zonas__imagen-2{
-    height: 520px;
-    width: 2300px;
+    height: auto;
+    width: 2200px;
     float: right;
     overflow: hidden;
     margin: 0px auto;
 }
 
 .div__zonas__imagen-3{
-    height: 468px;
-    width: 1430px;
+    height: auto;
+    width: 2500px;
     float: right;
     overflow: hidden;
     margin: 0px auto;
@@ -312,6 +414,12 @@ ion-icon[name="logo-instagram"]{
     width: 100%;
     object-fit: contain;
     transform: scale(1.4);
+}
+
+@media (max-width: 300px){
+    .div__zonas__imagen-3 img{
+        width: 70%;
+    }
 }
 
 .div__zonas__imagen-2 img{
@@ -328,37 +436,79 @@ ion-icon[name="logo-instagram"]{
     transform: scale(1.4);
 }
 
+@media (max-width: 500px){
+    .div__zonas__imagen{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px auto;
+        height: auto;
+        width: 500px;
+        float: none;
+        overflow: hidden; 
+    }
+    
+    .div__zonas__imagen-2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin: 0px auto;
+        height: auto;
+        width: 500px;
+        float: none;
+        overflow: hidden; 
+    }
+    
+    .div__zonas__imagen-3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px auto;
+        height: auto;
+        width: 500px;
+        float: none;
+        overflow: hidden;
+    }
+}
+
 .div__info{
     height: 100%;
     width: 100%;
     background-color: var(--white);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 90px;
     
+}
+
+.div__info > *{
+    margin: 50px;
 }
 
 .div__info__1{
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
-    margin-left: 7rem;
     color: var(--blue);
 }
 
 .div__info__1-2{
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
-    margin-left: 7rem;
-    width: 100%;
+    width: auto;
     color: var(--blue);
 }
 
 .columna{
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
+    width: 20%;
 }
 
 
@@ -367,7 +517,6 @@ ion-icon[name="logo-instagram"]{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin-left: 12rem;
     width: 30%;
     color: var(--blue);
 }
@@ -387,31 +536,29 @@ ion-icon[name="logo-instagram"]{
 
 .div__info__3{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin-left: 10rem;
     color: var(--blue);
     
 }
 
 .div__info__3 img, .div__info__4 img{
-    width: 7%; height: 7%;
+    width: 10%; height: 10%;
 }
 
 .div__info__3__div, .div__info__4__div{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
 .div__info__4{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin-right: -5rem;
     color: var(--blue);
 }
 
@@ -419,6 +566,76 @@ hr{
     border-top: 1px dashed var(--blue);
     width: 96%;
     height: 1px;
+}
+
+@media (max-width: 500px){
+    .div__info{
+        height: auto;
+        width: 100%;
+        background-color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 90px;
+    }
+
+    .div__info__1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--blue);
+        
+    }
+    
+    .div__info__1-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        color: var(--blue);
+        text-align: center;
+    }
+    
+    .columna{
+        width: 100%;
+    }
+    
+    
+    .div__info__2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 186%;
+        color: var(--blue);
+        text-align: center;
+    }
+
+    .div__info__2__texto{
+        font-size: 19px;
+    }
+    
+    .div__info__3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 186%;
+        color: var(--blue);
+        
+    }
+    
+    .div__info__4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 186%;
+        color: var(--blue);
+    }
 }
 
 /* responsive del carrusel */
@@ -439,6 +656,7 @@ hr{
 
 .container{
     width: 100%;
+    height: auto;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
@@ -463,7 +681,6 @@ hr{
 .owl-prev, .owl-next{
     margin-right: 0;
     display: flex;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     border-radius: 50%;
     width: 100px;
     height: 150px;
@@ -535,11 +752,13 @@ hr{
 
 .div__entorno{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 100%; height: 60%;
+    width: 100%; height: auto;
     background-color: var(--crema);
+    padding: 100px;
+    gap: 7rem;
 }
 
 .div__entorno__texto{
@@ -562,16 +781,39 @@ hr{
     margin: 0 0 0 -2rem;
 }
 
+@media (max-width: 500px){
+    .div__entorno{
+        padding: 21px;
+        gap: 0rem;
+    }
+
+    .div__entorno__texto{
+        font-size: 1.05rem;
+        line-height: 35px;
+    }
+    
+    .div__entorno__fotos{
+        display: flex;
+        padding-top: 5rem;
+        padding-left: 2rem;
+        padding-bottom: 4rem;
+    }
+    
+    .div__entorno__fotos img{
+        width: 80px; height: 80px;
+    }
+}
+
 .div__clientes{
     width: 100%; height: 70%;
     background-color: var(--white);
 }
 
-
+/* carrusel clientes  */
 .testimonial {
     display: flex;
     justify-content: center;
-    height: 70%;
+    height: 80%;
     background-color: var(--white);
 }
 
@@ -582,18 +824,11 @@ hr{
 }
 .single-box {
 	border: 3px solid #e6f0fa;
-	padding: 50px 30px 40px;
+	padding: 30px;
 	border-radius: 20px;
 	background: #fff;
 }
-.img-area {
-	margin: 45px 0 20px;
-}
-.single-box img {
-	max-width: 100px;
-	border-radius: 50%;
-	margin: 0 auto
-}
+
 .single-box h4 {
 	font-weight: 600;
 	margin: 0;
@@ -603,11 +838,7 @@ hr{
 .single-box {
 	overflow: hidden
 }
-.single-box .img-area {
-	width: 30%;
-	float: left;
-	margin: 0
-}
+
 .single-box .content {
 	width: 70%;
 	float: left;
@@ -621,6 +852,13 @@ hr{
 	border: 0;
 	padding: 0 50px;
 }
+
+.clients-carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .testi-carousel .owl-dots, .clients-carousel .owl-dots, .testi-carousel-three .owl-dots {
 	position: absolute;
 	left: 0;
@@ -649,12 +887,21 @@ hr{
 @media only screen and (min-width: 360px) and (max-width: 479px) {
 	.testimonial {
 		padding: 70px 0 130px;
+        height: 170%;
 	}
+
+    .titulo__opiniones{
+        margin-top: -4rem;
+    }
 }
 @media only screen and (min-width: 320px) and (max-width: 359px) {
 	.testimonial {
 		padding: 70px 0 130px;
+        height: 170%;
 	}
+    .titulo__opiniones{
+        margin-top: -4rem;
+    }
 	.single-box {
 		padding: 50px 0 40px;
 	}
@@ -707,7 +954,6 @@ hr{
     align-items: center;
     width: 100%; height: 60%;
     background-color: var(--crema);
-    margin-top: -3rem;
 }
 
 .div__info__1__texto-p{
@@ -738,4 +984,18 @@ hr{
 
 .footer__elemento__titulo{
     padding-bottom: 10px;
+}
+
+@media (max-width: 500px){
+    .footer{
+        height: auto;
+    }
+    
+    .footer__elemento__logo{
+        height: 140px;
+    }
+    
+    .footer__elemento__titulo{
+        font-size: 0.75rem;
+    }
 }
