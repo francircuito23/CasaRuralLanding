@@ -3,12 +3,15 @@ let errores;
 
 
 window.onload = function(){
+    document.body.style.setProperty("opacity","1");
+
     form = document.getElementById("formContactoReserva");
     let fields = form.querySelectorAll('input,select,textarea');
     for (let i = 0; i < fields.length; i++) {
         fields[i].addEventListener("change",validacionDatos);
     }
-    document.getElementById("btn_enviar").addEventListener("click",preventSend);
+    console.log(document.getElementById("sendButton"));
+    document.getElementById("sendButton").addEventListener("click",preventSend);
 }
 
 function preventSend(e){
@@ -32,8 +35,8 @@ function validateRecaptcha() {
     } else {
         //Enviar el formulario o permitir enviarlo
         form.submit();
-        document.getElementById("btn_enviar").removeEventListener("click",preventSend);
-        /*document.getElementById("btn_enviar").addEventListener("click", function(){
+        document.getElementById("sendButton").removeEventListener("click",preventSend);
+        /*document.getElementById("sendButton").addEventListener("click", function(){
             document.getElementById("form-congress-data").submit();
         });*/
 
@@ -88,7 +91,7 @@ function validacionDatos(){
         form.telefono.style.setProperty("border","");
     }
 
-    //Asunto
+   /* //Asunto
     if ((form.asunto.value == null )||(form.asunto.value.length<2)) {
         if(form.asunto.value !=""){
             form.asunto.style.setProperty("border","1px solid red");
@@ -98,6 +101,7 @@ function validacionDatos(){
     else{
         form.asunto.style.setProperty("border","");
     }
+    */
 
     //Mensaje
     if ((form.mensaje.value == null )||(form.mensaje.value.length<2)) {
@@ -110,6 +114,16 @@ function validacionDatos(){
         form.mensaje.style.setProperty("border","");
     }
 
+    //Checkbox políticas
+    if ((form.mensaje.value == null )||(form.mensaje.value.length<2)) {
+        if(form.mensaje.value !=""){
+            form.mensaje.style.setProperty("border","1px solid red");
+        }
+        errores++;
+    }
+    else{
+        form.mensaje.style.setProperty("border","");
+    }
 
 
 

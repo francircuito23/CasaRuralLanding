@@ -30,6 +30,10 @@ html, body{
     margin:0;
     padding:0;
 } 
+body {
+    opacity: 0;
+    transition: opacity 3s;
+}
 body{
     margin: 0;
     font-family: fuente3;
@@ -51,11 +55,15 @@ a, a:hover, a:focus, a:active {
     display: flex; flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    height: 170px;
+    
     
 }
-.spacer>img{
-    height: 75%;
+.spacer>a{ 
+    height: 100%;
+    
+}
+.spacer>a>img{
+    height: 100%;
     transform: translate(0%, 20%);
 }
 .spacer>div{
@@ -73,21 +81,40 @@ a, a:hover, a:focus, a:active {
    font-family: fuente3;
 }
 #mainCont{
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    align-items: center;
+    background: url("../img/CASA\ RURAL\ AIRE-15.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
+
 .sonCont{
     
     padding:  25px 15px;
     /*border: solid 1px #e8e8e8;*/
+    background-color: rgba(255, 255, 255,0.75);
+    border-radius: 8px;
+    position: relative;
+    
 
 }
 
-
+.sonCont:nth-child(2n){
+    position: relative;
+}
+#rrddCont{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+#sendButton{
+    position: absolute;
+    bottom: 15px;
+}
 Form{
     width: 90%;
     height: fit-content;
@@ -113,12 +140,46 @@ label{
     width: 100%;
     text-align: left;
 }
-textarea { resize: none; }
+textarea { 
+    resize: none; 
+    padding-top: 5px;
+}
 input, textarea{
     width: 100%;
+    font-size: 18px;
     margin-bottom: 20px;
     min-height: 35px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #a7a6a6;
+    color: var(--blue);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.checkbox{
+    min-height: 10px;
+    width: 13px;
+    margin-bottom: 6px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+.checkboxBox{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--blue);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--blue);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--blue);
 }
 input:focus, textarea:focus {
     outline-color: var(--blue);
@@ -177,13 +238,9 @@ input:-webkit-autofill {
 .sonCont>h4{
     width: 100%;
 }
-.infDiv:first-of-type{
-    border-top: 1px solid #e8e8e8 ;
-    text-align: justify;
-}
+
 .infDiv{
     min-height: 50px;
-    border-bottom: 1px solid #e8e8e8 ;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -208,62 +265,169 @@ input:-webkit-autofill {
     margin: 20px 0 0 0;
     background-color: var(--blue);
 }
+.sonCont >div>h3{
+    margin-top: 0;
+    color: var(--blue);
+    font-weight:bolder;
+    font-family: fuente2;
+}
 
-
-
-
+#rrddTitle::before {
+    content: '';
+    display: block;
+    width: 95%;
+    height: 2px;
+    margin: 0 0 20px 0;
+    background-color: var(--blue);
+}
+a{
+    
+    text-decoration: underline;
+    font-weight: bolder;
+}
+strong {
+    font-family: fuente2;
+}
 
 
             /* Responsive */
     
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    #mainCont{
+        margin-top: 0;
+        height: fit-content;
+        
+    }
     .sonCont {
         width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .sonContp:first-of-type {
+        margin-right: 5px;
+    }
+    .sonCont:nth-child(2n){
+        margin-left: 5px;
     }
     .spacer{
-        height: 100px;
+        height: 8%;
+    }
+    h2{
+        font-size: 10px;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    #mainCont{
+        margin-top: 10px;
+        height: fit-content;
+        
+    }
       .sonCont {
         width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .sonContp:first-of-type {
+        margin-right: 5px;
+    }
+    .sonCont:nth-child(2n){
+        margin-left: 5px;
     }
     .spacer{
-        height: 120px;
+        height: 10%;
+    }
+    h2{
+        font-size: 16px;
     }
     
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    #mainCont{
+        margin-top: 20px;
+        height: fit-content;
+        
+    }
     .sonCont {
         width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .sonContp:first-of-type {
+        margin-right: 15px;
+    }
+    .sonCont:nth-child(2n){
+        margin-left: 15px;
     }
     .spacer{
-        height: 150px;
+        height: 15%;
+    }
+    h2{
+        font-size: 20px;
     }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #mainCont{
+        margin-top: 30px;
+        height: 80%;
+        
+    }
     .sonCont {
         width: 45%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .spacer{
-        height: 170px;
+        height: 15%;
+    }
+    .sonContp:first-of-type {
+        margin-right: 15px;
+    }
+    .sonCont:nth-child(2n){
+        margin-left: 15px;
+    }
+
+    h2{
+        font-size: 22px;
     }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    body{
+        overflow-y: hidden;
+    }
+    #mainCont{
+        margin-top: 30px;
+        height: 83%;
+    }
     .sonCont {
         width: 35%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .spacer{
-        height: 170px;
+        height: 15%;
+    }
+    .sonContp:first-of-type {
+        margin-right: 15px;
+    }
+    .sonCont:nth-child(2n){
+        margin-left: 15px;
     }
     
+
+    h2{
+        font-size: 24px;
+    }
+}
+
+.sonCont{
+    height: 550px;
 }

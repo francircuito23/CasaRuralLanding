@@ -14,48 +14,54 @@
     <script src="../js/form.js"></script>
 
     <script src="https://kit.fontawesome.com/d3ce3e727e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
 
 </head>
 <body>
     <div class="spacer">
-        <img src="../../img/LogoAzulLinea.png" alt="Casa Rural Aire">
+        <a href="../CasaRuralAire.html"><img src="../../img/LogoAzulLinea.png" alt="Casa Rural Aire"></a>
         <div><h2>Contacto - Reserva</h2></div>
     </div>
     
     <div id="mainCont">
         <div class="sonCont">
             <form action="./formSend.php" method="post" id="formContactoReserva">
-                <label>Persona de contacto <span class="requiredForm">*</span></label><input type="text" name="personaContacto" placeholder="Juan Ruiz" required>
-                <label>Email <span class="requiredForm">*</span></label><input type="text" name="email" placeholder="juanruiz@mail.com" required>
-                <label>Teléfono <span class="requiredForm">*</span></label><input type="text" name="telefono" placeholder="+34 682 000 000" required>
-                <label>Asunto <span class="requiredForm">*</span></label><input type="text" name="asunto" required>
-                <label>Mensaje <span class="requiredForm">*</span></label><textarea name="mensaje" cols="40" rows="10" required></textarea>
+                <!--<label>Persona de contacto <span class="requiredForm">*</span></label>--><input type="text" name="personaContacto" placeholder="&#xf007 Nombre" style="font-family: Arial, 'FontAwesome'" required>
+                <!--<label>Email <span class="requiredForm">*</span></label>--><input type="text" name="email" placeholder="&#xf0e0 Email"  style="font-family: Arial, 'FontAwesome'" required>
+                <!--<label>Teléfono <span class="requiredForm">*</span></label>--><input type="text" name="telefono" placeholder="&#xf095 Teléfono" style="font-family: Arial, 'FontAwesome'" required>
+                <!--<label>Asunto <span class="requiredForm">*</span></label><input type="text" name="asunto" placeholder="&#xf007" style="font-family: Arial, 'Font Awesome 5 Free'" required>-->
+                <!--<label>Mensaje <span class="requiredForm">*</span></label>--><textarea name="mensaje" cols="40" rows="8" placeholder="&#xf15c Mensaje" style="font-family: Arial, 'Font Awesome 5 Free'" required></textarea>
+                <div class="checkboxBox">
+                    <input type="checkbox" class="checkbox"><label>He leído y acepto las <a href="" target="_blank"><strong>Condiciones de uso</strong></a> y la <a href="" target="_blank"><strong>Política de Privacidad</strong></a> de Casa Rural Aire</label>
+                </div>
+                
 
-
+                
                 <div class="g-recaptcha" 
                     data-sitekey="6LeACsMfAAAAALms6N723yK2d8fD-Qg663KGLc2j">
                 </div> 
                 
                 
-                <input type="submit" value="Enviar" id="btn_enviar">
+                <input id="sendButton" type="submit" value="Enviar" >
 
             </form>
         </div>
         <div class="sonCont">
-            <h4 >Contáctanos</h4>
+            <div>
+            <h3>Contáctanos</h3>
 
-            <p>¿Deseas más información o hacernos llegar tus sugerencias? Ponte en contacto con nosotros por tu medio de contacto preferido. Estaremos encantados de atenderte.</p>
+                <p>Quieres más información o tienes alguna sugerencia? Contáctanos  por tu medio de contacto preferido, estaremos encantados de atenderte.</p>
 
-            <h4>Info</h4>
+                <div class="infDiv"> <i class="fa-solid fa-location-dot"></i><p> Calle el Tomillo, 29, 29520, Fuente de Piedra (Málaga)</p></div>
+                <div class="infDiv"> <i class="fa-solid fa-phone"></i><p>633 196 775</p></div>
+                <div class="infDiv"> <i class="fa-solid fa-envelope"></i><p>info@casaruralairefp.com</p></div>
+            </div>
 
-            <div class="infDiv"> <i class="fa-solid fa-location-dot"></i><p> Calle el Tomillo, 29, 29520, Fuente de Piedra (Málaga)</p></div>
-            <div class="infDiv"> <i class="fa-solid fa-phone"></i><p>633 196 775</p></div>
-            <div class="infDiv"> <i class="fa-solid fa-envelope"></i><p>info@casaruralairefp.com</p></div>
-
-            <h4>Redes Sociales</h4>
-            <a href="https://www.facebook.com/pg/casaruralairefp/posts/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/casaruralairefp/?hl=es" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
-            
+            <div id="rrddCont">
+                <h3 id="rrddTitle">Síguenos en RRSS</h3>
+                <a href="https://www.facebook.com/pg/casaruralairefp/posts/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/casaruralairefp/?hl=es" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            </div>
         </div>
     </div>
     
