@@ -437,3 +437,26 @@ strong {
     height: 550px;
     min-height: fit-content;
 }
+
+
+
+#boton-up{
+    position: fixed;
+    bottom: 40px;
+    left: 50px;
+    padding: 10px;
+    background-color: rgba(0, 36, 155, 0.6);;
+    border-radius: 100%;
+    z-index: 99;
+    transition: .5s;
+}
+
+#boton-up:hover{
+    background-color: var(--blue);
+    transform: scale(1.1);
+}
+
+ion-icon[name="home-outline"]{
+    font-size: 40px;
+    color: var(--white);
+}
