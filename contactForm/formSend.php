@@ -63,10 +63,10 @@
     $body = $body."<p><b>Persona de Contacto:</b> " .$_POST['personaContacto'] ."</p>" ;
     $body = $body."<p><b>Email:</b> " .$_POST['email'] ."</p>" ;
     $body = $body."<p><b>Teléfono:</b> " .$_POST['telefono'] ."</p>" ;
-    $body = $body.'<p  style="max-width: 350px"><b>Asunto:</b> ' .$_POST['asunto'] ."</p>" ;
+   // $body = $body.'<p  style="max-width: 350px"><b>Asunto:</b> ' .$_POST['asunto'] ."</p>" ;
     //$body = $body."<p><b>Fecha Reserva:</b> " .$_POST['fechaReserva'] ."</p>" ;
     $body = $body.'<p  style="max-width: 350px"><b>Mensaje:</b> ' .$_POST['mensaje'] ."</p><br>" ;
-    $body = $body."<p><b>Reserva Realizada el :</b> " .$date." a las ".$time."</p>" ;
+    $body = $body."<p><b>Formulario Enviado el :</b> " .$date." a las ".$time."</p>" ;
 
 
 
@@ -87,15 +87,18 @@
         //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->SMTPDebug = false;                                      //Disable DEBUG and STMP MESSAGES
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+
+        $mail->Host       = 'smtp-mail.outlook.com';                 //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'fansmarketing16@gmail.com';                     //SMTP username
+        $mail->Username   = 'fansmarketing16@outlook.es';            //SMTP username
+        
         $mail->Password   = 'Medac2021';                               //SMTP password
         $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
-        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port       = 587;                       //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         
         //Recipients
-        $mail->setFrom('fansmarketing16@gmail.com', 'CASA RURAL AIRE');
+
+        $mail->setFrom('fansmarketing16@outlook.es', 'CASA RURAL AIRE');
         
         $mail->addAddress('fansmarketing16@gmail.com');              
 

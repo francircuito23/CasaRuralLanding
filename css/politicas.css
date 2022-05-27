@@ -1,0 +1,220 @@
+:root{
+    --negro: black;
+    --white:white;
+    --blue: rgb(13, 55, 123);
+    --crema:  rgb(226, 195, 163);
+    --crema2: rgb(216, 168, 120);
+    --red: rgb(199, 24, 24);
+}
+/*FONTS*/
+@font-face {
+    font-family: fuente1;
+    src: url(../fuentes/MinionVariableConcept-Roman.otf);
+}
+@font-face {
+    font-family: fuente2;
+    src: url(../fuentes/MyriadPro-Bold.otf);
+}
+
+@font-face {
+    font-family: fuente3;
+    src: url(../fuentes/MyriadPro-Light.otf);
+}
+
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+} 
+body {
+    opacity: 0;
+    transition: opacity 3s;
+}
+body{
+    margin: 0;
+    font-family: fuente3;
+} 
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.spacer{
+    width: 100%;
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    
+    
+}
+.spacer>a{ 
+    height: 100%;
+    
+}
+.spacer>a>img{
+    height: 100%;
+    transform: translate(0%, 20%);
+}
+.spacer>div{
+    height: 25%;
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.spacer>div>h2{
+   color: white;
+   font-weight: lighter;
+   font-family: fuente3;
+}
+#mainCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background: url("../img/CASA\ RURAL\ AIRE-15.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.sonCont{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    min-height: fit-content;
+    padding:  25px 15px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.75);
+    text-align: justify;
+}
+
+.sonCont>table{
+    width: 100%;
+    text-align: justify;
+}
+.sonCont>table>thead>tr>th , .sonCont>table>tbody>tr>td{
+    padding: 5px;
+    font-size: 16px;
+}
+a{
+    
+    text-decoration: underline;
+    font-weight: bolder;
+}
+strong {
+    font-family: fuente2;
+}
+
+
+
+            /* Responsive */
+    
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #mainCont{
+        min-height: 92%;
+        height: fit-content;
+        
+    }
+   
+    .spacer{
+        height: 8%;
+    }
+    .sonCont>table>thead>tr>th , .sonCont>table>tbody>tr>td ,.sonCont{
+        font-size: 10px;
+    }
+    h2{
+        font-size: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #mainCont{
+        min-height: 90%;
+        height: fit-content;
+        
+    }
+    
+    .spacer{
+        height: 10%;
+    }
+    .sonCont>table>thead>tr>th , .sonCont>table>tbody>tr>td ,.sonCont{
+        font-size: 12px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #mainCont{
+        min-height: 85%;
+        height: fit-content;
+        
+    }
+    
+    .spacer{
+        height: 15%;
+    }
+    .sonCont>table>thead>tr>th , .sonCont>table>tbody>tr>td ,.sonCont{
+        font-size: 14px;
+    }
+    h2{
+        font-size: 20px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #mainCont{
+        min-height: 85%;
+        height: fit-content;
+    }
+    
+    .spacer{
+        height: 15%;
+    }
+    .sonCont>table>thead>tr>th , .sonCont>table>tbody>tr>td ,.sonCont{
+        font-size: 16px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+    #mainCont{
+        min-height: 85%;
+    }
+    
+    .spacer{
+        height: 15%;
+    }
+    .sonCont>table>thead>tr>th , .sonCont>table>tbody>tr>td ,.sonCont{
+        font-size: 16px;
+    }
+    
+
+    h2{
+        font-size: 24px;
+    }
+}
+
+.sonCont{
+    width: 80%;
+}

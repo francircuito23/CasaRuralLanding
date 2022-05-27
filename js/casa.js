@@ -91,24 +91,34 @@ window.onload = () =>{
         document.getElementsByTagName("i")[3].style.color = "rgb(112, 96, 96)";
     });
   
-    window.addEventListener("scroll",function(){
-        console.log("me muevo")
-    });
+
+
+
+
+    let cookieModal = document.querySelector(".cookies")
+    let cancelarCookie = document.querySelector(".btn.cancelar")
+    let aceptarCookie = document.querySelector(".btn.aceptar")
+
+    cancelarCookie.addEventListener("click", () =>{
+        cookieModal.classList.remove("active")
+    })
+
+    aceptarCookie.addEventListener("click", () =>{
+        cookieModal.classList.remove("active")
+
+        localStorage.setItem("aceptarCookie", "yes")
+    })
+
+    setTimeout( () =>{
+        let aceptarCookie = localStorage.getItem("aceptarCookie")
+
+        if(aceptarCookie != "yes"){
+            cookieModal.classList.add("active")
+        }
+
+    }, 3000)
+
 
 }
 
   
-function topScroll(){
-
-    console.log("D.scrollTop");
-    
-    var B= document.body; //IE 'quirks'
-        var D= document.documentElement; //IE with doctype
-        D= (D.clientHeight)? D: B;
-    
-    if (D.scrollTop == 0)
-        {
-            alert("top");
-        }  
-        
-};

@@ -10,20 +10,38 @@ window.onload = function(){
     for (let i = 0; i < fields.length; i++) {
         fields[i].addEventListener("change",validacionDatos);
     }
-    console.log(document.getElementById("sendButton"));
     document.getElementById("sendButton").addEventListener("click",preventSend);
 }
 
 function preventSend(e){
     e.preventDefault();
-    if (validacionDatos() === true) {
-        //validateRecaptcha();
-        
-        //Mientras no funcion el catpcha, envio aqui. Cuando funcione, enviar por validateRecaptcha()
 
+
+    if (validacionDatos() === true) {
+
+
+
+        //Checkbox políticas 
+        if (document.getElementById("checkbox").checked==false) {
+            
+            alert("Acepta la Política de Privacidad y Condiciones de uso");
+        }
+        else{
+        //validateRecaptcha();
+        //Mientras no funcion el catpcha, envio aqui. Cuando funcione, enviar por validateRecaptcha()
         form.submit();
-        
+
+
+        }
     }
+    else{
+        alert("Rellena los campos del formulario");
+    }
+    
+
+
+
+    
 }
 
 //VALIDACIÓN CAPTCHA
@@ -113,18 +131,18 @@ function validacionDatos(){
     else{
         form.mensaje.style.setProperty("border","");
     }
-
+    
+    /*//console.log(document.getElementById("checkbox").checked);
+    console.log(document.getElementById("checkbox").checked==false);
     //Checkbox políticas
-    if ((form.mensaje.value == null )||(form.mensaje.value.length<2)) {
-        if(form.mensaje.value !=""){
-            form.mensaje.style.setProperty("border","1px solid red");
-        }
+    if (document.getElementById("checkbox").checked==false) {
+        document.getElementById("checkbox").style.setProperty("outline","1px solid red");
         errores++;
     }
     else{
-        form.mensaje.style.setProperty("border","");
+        document.getElementById("checkbox").style.setProperty("outline","");
     }
-
+    */
 
 
 

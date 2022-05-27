@@ -303,6 +303,7 @@ strong {
         width: 90%;
         margin-top: 30px;
         margin-bottom: 30px;
+        padding:  25px 0px;
     }
     .sonContp:first-of-type {
         margin-right: 5px;
@@ -329,6 +330,7 @@ strong {
         width: 90%;
         margin-top: 30px;
         margin-bottom: 30px;
+        padding:  25px 0px;
     }
     .sonContp:first-of-type {
         margin-right: 5px;
@@ -356,6 +358,7 @@ strong {
         width: 90%;
         margin-top: 30px;
         margin-bottom: 30px;
+        padding:  25px 15px;
     }
     .sonContp:first-of-type {
         margin-right: 15px;
@@ -382,6 +385,7 @@ strong {
         width: 45%;
         margin-top: 0;
         margin-bottom: 0;
+        padding:  25px 15px;
     }
     .spacer{
         height: 15%;
@@ -411,6 +415,7 @@ strong {
         width: 35%;
         margin-top: 0;
         margin-bottom: 0;
+        padding:  25px 15px;
     }
     .spacer{
         height: 15%;
@@ -430,4 +435,5 @@ strong {
 
 .sonCont{
     height: 550px;
+    min-height: fit-content;
 }
